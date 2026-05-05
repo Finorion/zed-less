@@ -47,7 +47,7 @@
 "+_" @operator
 
 (class_selector
-    "." @variable)
+    "." @selector)
 
 (keyword_query) @function
 
@@ -61,15 +61,15 @@
 
 (value_value) @property
 
-(pseudo_class_selector) @tag
+(pseudo_class_selector) @selector.pseudo
 
 (pseudo_class_selector
-    ":" @variable)
+    ":" @selector.pseudo)
 
-(pseudo_element_selector) @tag
+(pseudo_element_selector) @selector.pseudo
 
 (pseudo_element_selector
-    "::" @variable)
+    "::" @selector.pseudo)
 
 (important) @keyword
 
@@ -81,15 +81,15 @@
 
 (attribute_selector) @property
 
-(id_selector) @tag
+(id_selector) @variable
 
 (id_selector
     "#" @variable)
 
-(class_selector) @tag
+(class_selector) @selector
 
 (tag_name) @tag
-(class_name) @tag
+(class_name) @selector
 
 (string_value) @string
 (integer_value) @number
